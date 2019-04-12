@@ -14,6 +14,8 @@ ind <- which(data == '?', arr.ind = TRUE)[,1]
 dataCleaned <- data[-ind,]
 #Ensure all values are numeric
 str(dataCleaned)
+#Convert to character first
+dataCleaned$bare_nuclei <- as.character(dataCleaned$bare_nuclei)
 #Convert "bare_nuclei" column to "numeric"
 dataCleaned$bare_nuclei <- as.numeric(dataCleaned$bare_nuclei)
 
